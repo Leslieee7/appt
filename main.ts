@@ -1,8 +1,4 @@
-let direction = 0
-let speed = 0
-let acceleration = 0
 function doSomething (vx: number, vy: number) {
-    let mySprite: Sprite = null
     if (Math.abs(vx) > Math.abs(vy)) {
         if (vx >= 1) {
             mySprite.setImage(img`
@@ -85,6 +81,28 @@ function doSomething (vx: number, vy: number) {
         }
     }
 }
+let acceleration = 0
+let speed = 0
+let direction = 0
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Player)
 game.onUpdate(function () {
     let max_speed = 0
     let turnspeed = 0
