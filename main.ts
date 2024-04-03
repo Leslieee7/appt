@@ -1,9 +1,17 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairEast, function (sprite, location) {
-    game.setGameOverMessage(true, "GAME OVER!")
-    info.changeScoreBy(1)
-    if (true) {
+function different_levels () {
+    let tilemap2 = 0
+    if (tilemap2 == 0) {
+    	
+    } else if (tilemap2 == 0) {
         tiles.setCurrentTilemap(tilemap`level4`)
+    } else if (tilemap2 == 0) {
+    	
+    } else {
+    	
     }
+}
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairEast, function (sprite, location) {
+    scene.cameraShake(4, 500)
 })
 function doSomething (vx: number, vy: number) {
     if (Math.abs(vx) > Math.abs(vy)) {
@@ -111,6 +119,8 @@ mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
+tiles.setCurrentTilemap(tilemap`level2`)
+tiles.setCurrentTilemap(tilemap`level4`)
 tiles.setCurrentTilemap(tilemap`level2`)
 game.onUpdate(function () {
     let max_speed = 0
